@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1 - Máy tính cơ bản</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav><a href="/bai1">Bài 1</a> | <a href="/bai2">Bài 2</a> | <a href="/bai3">Bài 3</a></nav>
+    <h1>Bài 1 - Máy tính cơ bản</h1>
+    <form method="POST">
+        <label>Số thứ nhất (a):</label>
+        <input type="text" name="a" value="{{ a }}" placeholder="Ví dụ: 2,5">
+        <p class="loi">{{ loi_a }}</p>
+
+        <label>Phép toán:</label>
+        <select name="op">
+            <option value="+" {% if op == '+' %}selected{% endif %}>+</option>
+            <option value="-" {% if op == '-' %}selected{% endif %}>-</option>
+            <option value="*" {% if op == '*' %}selected{% endif %}>*</option>
+            <option value="/" {% if op == '/' %}selected{% endif %}>/</option>
+        </select>
+        <p class="loi">{{ loi_op }}</p>
+
+        <label>Số thứ hai (b):</label>
+        <input type="text" name="b" value="{{ b }}" placeholder="Ví dụ: 4">
+        <p class="loi">{{ loi_b }}</p>
+
+        <button type="submit">Tính</button>
+    </form>
+    {% if ket_qua %}<div class="ketqua">{{ ket_qua }}</div>{% endif %}
+</body>
+</html>

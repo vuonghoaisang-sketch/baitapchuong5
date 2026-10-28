@@ -1,0 +1,17 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 550px;
+    margin: 35px auto;
+    padding: 20px;
+    line-height: 1.5;
+}
+nav { margin-bottom: 24px; }
+nav a { margin-right: 16px; }
+label { display: block; font-weight: bold; margin-top: 10px; }
+input, select { padding: 10px; width: 100%; box-sizing: border-box; font-size: 16px; }
+.loi { color: #c62828; min-height: 20px; margin-top: 3px; }
+button { background: #1769aa; color: white; padding: 10px 20px; border: 0; cursor: pointer; }
+.ketqua { margin-top: 20px; padding: 14px; background: #f0f0f0; border-radius: 6px; }
+.xanh { background: #c8e6c9; }
+.vang { background: #fff3b0; }
+.do { background: #ffcdd2; }

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3 - Tính chỉ số BMI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav><a href="/bai1">Bài 1</a> | <a href="/bai2">Bài 2</a> | <a href="/bai3">Bài 3</a></nav>
+    <h1>Bài 3 - Tính chỉ số BMI</h1>
+    <form method="POST">
+        <label>Chiều cao (cm):</label>
+        <input type="text" name="cao" value="{{ cao }}" placeholder="Ví dụ: 170">
+        <p class="loi">{{ loi_cao }}</p>
+
+        <label>Cân nặng (kg):</label>
+        <input type="text" name="nang" value="{{ nang }}" placeholder="Ví dụ: 65,5">
+        <p class="loi">{{ loi_nang }}</p>
+
+        <button type="submit">Tính BMI</button>
+    </form>
+    {% if ket_qua %}
+        <div class="ketqua {{ mau }}">
+            <strong>{{ ket_qua }}</strong>
+            <p>{{ goi_y }}</p>
+        </div>
+    {% endif %}
+</body>
+</html>

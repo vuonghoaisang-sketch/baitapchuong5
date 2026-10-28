@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2 - Tính điểm học phần</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav><a href="/bai1">Bài 1</a> | <a href="/bai2">Bài 2</a> | <a href="/bai3">Bài 3</a></nav>
+    <h1>Bài 2 - Tính điểm học phần</h1>
+    <form method="POST">
+        <label>Điểm chuyên cần (10%):</label>
+        <input type="text" name="cc" value="{{ cc }}">
+        <p class="loi">{{ loi_cc }}</p>
+
+        <label>Điểm giữa kỳ (30%):</label>
+        <input type="text" name="gk" value="{{ gk }}">
+        <p class="loi">{{ loi_gk }}</p>
+
+        <label>Điểm cuối kỳ (60%):</label>
+        <input type="text" name="ck" value="{{ ck }}">
+        <p class="loi">{{ loi_ck }}</p>
+
+        <button type="submit">Tính điểm</button>
+    </form>
+    {% if ket_qua %}<div class="ketqua">Điểm học phần: {{ ket_qua }}</div>{% endif %}
+</body>
+</html>
